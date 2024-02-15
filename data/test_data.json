@@ -1,0 +1,29 @@
+[
+    {
+        "platform":
+        {
+            "launchYear" : 1989,
+            "name": "Atari Lynx"
+        },
+        "title": "Chip's Challenge",
+        "year": 1989
+    },
+    {
+        "platform":
+        {
+            "launchYear" : 2003,
+            "name": "Steam"
+        },
+        "title": "Chip's Challenge 2",
+        "year": 2015
+    },
+    {
+        "platform":
+        {
+            "launchYear" : 1994,
+            "name": "PlayStation 1"
+        },
+        "title": "Spyro the Dragon",
+        "year": 1998
+    }
+]
