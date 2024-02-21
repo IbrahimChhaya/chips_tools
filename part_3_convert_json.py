@@ -70,4 +70,5 @@ with open(input_json_file, "r") as reader:
 
 cc_level_pack_obj = json_to_cclevelpack(game_json_data)
 
-cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "C:/Users/ibrah/OneDrive/Documents/Masters/Programming for Game Designers/Tile World/sets/ichhaya_cc1.dat")
+# cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "C:/Users/ibrah/OneDrive/Documents/Masters/Programming for Game Designers/Tile World/sets/ichhaya_cc1.dat")
+cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "data/ichhaya_cc1.dat")
