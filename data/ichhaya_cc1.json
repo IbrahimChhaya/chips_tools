@@ -8,7 +8,7 @@
             {
                 "CCMapTitleField": "PfGD Test Level",
                 "CCMapHintField": "Collect all the keys and chips to win",
-                "CCEncodedPasswordField": [218, 216, 210, 220],
+                "CCEncodedPasswordField": 218216210220,
                 "CCMonsterMovementField": { "x": 9, "y": 9 },
                 "CCTrapControlsField": { "bx": 5, "by": 5, "tx": 7, "ty": 7 },
                 "CCCloningMachineControlsField": { "bx": 8, "by": 8, "tx": 11, "ty": 10 }
@@ -56,7 +56,7 @@
             {
                 "CCMapTitleField": "PfGD Test Level2",
                 "CCMapHintField": "Collect all the chips to unlock the exit",
-                "CCEncodedPasswordField": [205, 203, 220, 220],
+                "CCEncodedPasswordField": 205203220220,
                 "CCMonsterMovementField": { "x": 9, "y": 9 },
                 "CCTrapControlsField": { "bx": 7, "by": 6, "tx": 7, "ty": 7 },
                 "CCCloningMachineControlsField": { "bx": 11, "by": 11, "tx": 11, "ty": 10 }

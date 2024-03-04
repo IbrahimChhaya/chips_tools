@@ -11,13 +11,22 @@ import json
 def json_to_cclevelpack(json_data):
     cc_level_pack = cc_classes.CCLevelPack()
 
-    for level in json_data["levels"]:
-        level_number = level["level_number"]
+    for count, level in enumerate(json_data["levels"], start=1):
+        level_number = count
         time = level["time"]
         num_chips = level["num_chips"]
         cc_map_title_field = level["optional_fields"]["CCMapTitleField"]
         cc_map_hint_field = level["optional_fields"]["CCMapHintField"]
-        cc_encoded_password_field = level["optional_fields"]["CCEncodedPasswordField"]
+        # cc_encoded_password_field = level["optional_fields"]["CCEncodedPasswordField"]
+        
+        password = str(level["optional_fields"]["CCEncodedPasswordField"])
+        part1 = password[:3]
+        part2 = password[3:6]
+        part3 = password[6:9]
+        part4 = password[9:]
+        
+        cc_encoded_password_field = [int(part1), int(part2), int(part3), int(part4)]
+
         cc_monster_movement_field = level["optional_fields"]["CCMonsterMovementField"]
         cc_trap_controls_field = level["optional_fields"]["CCTrapControlsField"]
         cc_cloning_machine_controls_field = level["optional_fields"]["CCCloningMachineControlsField"]
@@ -63,7 +72,8 @@ def json_to_cclevelpack(json_data):
     return cc_level_pack
 
 
-input_json_file = "data/ichhaya_cc1.json"
+# input_json_file = "data/ichhaya_cc1.json"
+input_json_file = "data/ichhaya_cc_level_pack.json"
 
 with open(input_json_file, "r") as reader:
     game_json_data = json.load(reader)
@@ -71,4 +81,7 @@ with open(input_json_file, "r") as reader:
 cc_level_pack_obj = json_to_cclevelpack(game_json_data)
 
 # cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "C:/Users/ibrah/OneDrive/Documents/Masters/Programming for Game Designers/Tile World/sets/ichhaya_cc1.dat")
-cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "data/ichhaya_cc1.dat")
+# cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "data/ichhaya_cc1.dat")
+
+# cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "C:/Users/ibrah/OneDrive/Documents/Masters/Programming for Game Designers/Tile World/sets/ichhaya_cc_level_pack.dat")
+cc_dat_utils.write_cc_level_pack_to_dat(cc_level_pack_obj, "data/ichhaya_cc_level_pack.dat")
