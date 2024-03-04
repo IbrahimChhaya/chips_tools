@@ -11,7 +11,7 @@ import json
 def json_to_cclevelpack(json_data):
     cc_level_pack = cc_classes.CCLevelPack()
 
-    for level in json_data:
+    for level in json_data["levels"]:
         level_number = level["level_number"]
         time = level["time"]
         num_chips = level["num_chips"]
